@@ -1,24 +1,61 @@
 <script setup>
 import { ref } from 'vue'
-import axios from 'axios'
+import { Octokit } from '@octokit/rest'
 
 defineOptions({ name: 'Words' })
 
-import { useData } from 'vitepress'
+const octokit = new Octokit()
 
-const { isDark } = useData()
+const words = ref([])
+const labels = ref([])
+const loading = ref(false)
 
-console.log(isDark.value)
-
-const talks = ref([])
-
-// 调用后端接口获取说说数据
-const fetchTalks = async () => {
+// 获取所有说说数据
+const fetchWords = async () => {
   try {
-    const response = await axios.get('http://localhost:9999/api/v1/daily-words')
-    talks.value = response.data
+    loading.value = true
+    // TODO 分页查询实现
+    const { data } = await octokit.issues.listForRepo({
+      owner: 'kangjia96',
+      repo: 'daily-words',
+      sort: 'created',
+      state: 'all',
+      per_page: 1000,
+    })
+
+    // 将数据按照 updated_at 字段的年份和月份分组
+    // words.value = data.reduce((acc, cur) => {
+    //   const yearMonth = `${cur.updated_at.slice(0, 4)}-${cur.updated_at.slice(5, 7)}`
+    //   if (!acc[yearMonth]) {
+    //     acc[yearMonth] = []
+    //   }
+    //   acc[yearMonth].push(cur)
+    //   return acc
+    // }, {})
+
+    words.value = data.map((item) => ({
+      ...item,
+      updated_at: formatPublishTime(item.updated_at),
+    }))
+    console.log(words.value)
+    loading.value = false
   } catch (error) {
+    loading.value = false
     console.error('获取说说数据失败：', error)
+  }
+}
+
+// 获取所有标签数据
+const fetchLabels = async () => {
+  try {
+    const { data } = await octokit.issues.listLabelsForRepo({
+      owner: 'kangjia96',
+      repo: 'daily-words',
+    })
+    labels.value = data
+    console.log('label', labels.value)
+  } catch (error) {
+    console.error('获取标签数据失败：', error)
   }
 }
 
@@ -32,22 +69,40 @@ const formatPublishTime = (date) => {
   const minutes = String(dateObj.getMinutes()).padStart(2, '0')
   return `${year}-${month}-${day} ${hours}:${minutes}`
 }
+
 // 页面加载时调用获取说说数据的函数
-fetchTalks()
+fetchWords()
+fetchLabels()
 </script>
 
 <template>
-  <main>
-    <div v-if="talks.length === 0" style="text-align: center">empty~</div>
+  <main style="width: 80%; margin: 0 auto">
+    <h1 style="margin: 20px 0; font-weight: bolder; font-size: 1.75rem">
+      说说 <Badge type="warning" text="功能内测中，不稳定" />
+    </h1>
+    <div style="background-color: #322a02; padding: 10px; border-radius: 10px">
+      说说（Daily Words):一句话叙当前所历之事，一句话抒此刻难言之情，一句话吐所遇违心之槽。
+    </div>
+    <div>
+      <p>合计：{{ words.length }} 个说说。</p>
+      <p>
+        <span>标签：</span>
+        <span v-for="label in labels" :key="label.id" style="margin-right: 10px">
+          #{{ label.name }}
+        </span>
+      </p>
+    </div>
+    <div v-if="loading" style="text-align: center">loading.......</div>
+    <div v-else-if="!loading && words.length === 0" style="text-align: center">empty~</div>
     <div v-else style="display: flex; flex-wrap: wrap">
-      <div v-for="(talk, index) in talks" :key="index" class="talk-item">
-        <p class="talk-content">{{ talk.content }}</p>
-        <p style="display: flex; gap: 10px; margin: 10px 0">
-          <span style="font-size: 0.8em" v-for="(tag, tagIndex) in talk.tags" :key="tagIndex">
-            #{{ tag }}
+      <div v-for="word in words" :key="word.id" class="talk-item">
+        <p>{{ word.body }}</p>
+        <p style="display: flex; gap: 10px; margin: 5px 0">
+          <span style="font-size: 0.8em" v-for="label in word.labels" :key="label.id">
+            #{{ label.name }}
           </span>
         </p>
-        <p style="text-align: right; font-size: 0.8em">{{ formatPublishTime(talk.publishTime) }}</p>
+        <p style="text-align: right; font-size: 0.8em">{{ word.updated_at }}</p>
       </div>
     </div>
   </main>
@@ -55,8 +110,7 @@ fetchTalks()
 
 <style scoped>
 .talk-item {
-  background-color: #fdfcfc;
-  border: #e8e8e8 1px solid;
+  border: rebeccapurple 1px solid;
   padding: 10px;
   margin: 10px;
 }

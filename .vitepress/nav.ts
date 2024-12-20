@@ -1,5 +1,6 @@
 const nav = [
-  { text: '导航', link: '/' },
+  { text: '首页', link: '/' },
+  { text: '导航', link: '/nav' },
   {
     text: '进击的前端',
     items: [
@@ -29,7 +30,7 @@ const nav = [
     ],
   },
   { text: '工具链与格物篇', link: '/toolchain/headline.md' },
-  { text: '日常笔记', link: '/daily/index.md' },
+  { text: '日常笔记', link: '/daily/about.md' },
   {
     text: '关于',
     items: [
@@ -39,7 +40,6 @@ const nav = [
       { text: '友情链接', link: '/friends.md' },
     ],
   },
-  { text: '友链', link: '/daily/index.md' },
 ]
 
 export default nav
