@@ -1,0 +1,20 @@
+{
+  "name": "yumi-notes",
+  "version": "1.0.0",
+  "author": "林深时觉寒",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
