@@ -29,16 +29,17 @@ const nav = [
     ],
   },
   { text: '工具链与格物篇', link: '/toolchain/headline.md' },
+  { text: '日常笔记', link: '/daily/index.md' },
   {
     text: '关于',
     items: [
       { text: '关于我', link: '/about/' },
       { text: '简历', link: '/resume.md' },
-      { text: '日常笔记', link: '/daily/index.md' },
       { text: '闲言', link: '/daily-words.md' },
       { text: '友情链接', link: '/friends.md' },
     ],
   },
+  { text: '友链', link: '/daily/index.md' },
 ]
 
 export default nav

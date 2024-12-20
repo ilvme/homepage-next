@@ -16,7 +16,6 @@ const talks = ref([])
 const fetchTalks = async () => {
   try {
     const response = await axios.get('http://localhost:9999/api/v1/daily-words')
-    console.log(response)
     talks.value = response.data
   } catch (error) {
     console.error('获取说说数据失败：', error)
@@ -39,7 +38,8 @@ fetchTalks()
 
 <template>
   <main>
-    <div style="display: flex; flex-wrap: wrap">
+    <div v-if="talks.length === 0" style="text-align: center">empty~</div>
+    <div v-else style="display: flex; flex-wrap: wrap">
       <div v-for="(talk, index) in talks" :key="index" class="talk-item">
         <p class="talk-content">{{ talk.content }}</p>
         <p style="display: flex; gap: 10px; margin: 10px 0">

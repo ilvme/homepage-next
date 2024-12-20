@@ -13,6 +13,8 @@ export default defineConfig({
   themeConfig: {
     logo: 'favicon.ico',
 
+    comment: true,
+
     nav,
     sidebar,
     // aside: 'left',
@@ -40,6 +42,6 @@ export default defineConfig({
 
     externalLinkIcon: true,
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/kangjia96' }],
+    // socialLinks: [{ icon: 'github', link: 'https://github.com/kangjia96' }],
   },
 })
