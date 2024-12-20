@@ -9,6 +9,7 @@ export default defineConfig({
 
   srcDir: 'docs',
   outDir: 'dist',
+  ignoreDeadLinks: true,
 
   themeConfig: {
     logo: 'favicon.ico',

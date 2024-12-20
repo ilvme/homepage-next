@@ -30,7 +30,7 @@ const nav = [
     ],
   },
   { text: '工具链与格物篇', link: '/toolchain/headline.md' },
-  { text: '日常笔记', link: '/daily/about.md' },
+  { text: '日常笔记', link: '/daily/index.md' },
   {
     text: '关于',
     items: [
