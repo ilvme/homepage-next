@@ -1,27 +1,18 @@
----
-title: "康佳的简历"
----
-<script setup>
-import ResumeDownloader from '../.vitepress/components/ResumeDownloader.vue'
-</script>
-<style>
-    .vp-doc h2 {
-      margin-top: 30px ;
-    }
-</style>
 # 康佳的简历
-
-<ResumeDownloader name="简历_康佳_18232110170_Java 后端"/>
 
 ## **个人信息**
 
+---
+
 - **我：** 康佳 | 男 | Base 天津
 - **教育水平：** 本科 | 河北大学 | 计算机科学与技术专业 | 2019 年毕业
-- **手机 & 微信：** +86 18232110170
+- **手机 & 微信：**+86 18232110170
 - **邮箱：[ikangjia.cn@outlook.com](mailto:ikangjia.cn@outlook.com)**
 - **个人主页：[https://ikangjia.cn](https://ikangjia.cn/)**
 
 ## 技能清单
+
+---
 
 ### **后端**  & DevOps
 
@@ -47,6 +38,8 @@ import ResumeDownloader from '../.vitepress/components/ResumeDownloader.vue'
 - 注重代码规范与质量，一直践行阿里的 Java 开发规约，也乐意遵守各种代码规范
 
 ## **工作经历**
+
+---
 
 ### **2021.06 - 至今 天津南大通用数据技术股份有限公司 | Java 开发**
 
@@ -103,6 +96,8 @@ SQL 执行器：在 Web 页面实现了输入 SQL 进行操作功能。主要难
 期间参与了库存管理系统项目的部分模块的前后端实现。
 
 ## **自我评价**
+
+---
 
 - 工作负责，解决问题能力强，遇到麻烦时会第一时间寻找解决方案而非抱怨。有一定抗压能力
 - 喜欢整洁的桌面，优雅的代码和一目了然的注释，要求自己一定要写出当前能力下质量最高的代码
