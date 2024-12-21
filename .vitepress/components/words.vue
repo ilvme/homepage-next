@@ -3,10 +3,15 @@ import { ref } from 'vue'
 import { Octokit } from '@octokit/rest'
 import oldWordsRaw from '../../scripts/old-words.raw.js'
 import parseCSV from '../../scripts/words.js'
+import { formatTime } from '../../scripts/utils.js'
 
 defineOptions({ name: 'Words' })
 
-const octokit = new Octokit()
+const octokit = new Octokit({
+  auth: import.meta.env.VITE_GITHUB_TOKEN,
+  userAgent: 'kangjia96/daily-words',
+  baseUrl: 'https://api.github.com',
+})
 
 const words = ref([])
 const labels = ref([])
@@ -27,7 +32,7 @@ const fetchWords = async () => {
 
     words.value = data.map((item) => ({
       ...item,
-      updated_at: formatPublishTime(item.updated_at),
+      updated_at: formatTime(item.updated_at),
     }))
     words.value.push(...parseCSV(oldWordsRaw))
     loading.value = false
@@ -48,17 +53,6 @@ const fetchLabels = async () => {
   } catch (error) {
     console.error('获取标签数据失败：', error)
   }
-}
-
-// 格式化发布时间函数
-const formatPublishTime = (date) => {
-  const dateObj = new Date(date)
-  const year = dateObj.getFullYear()
-  const month = String(dateObj.getMonth() + 1).padStart(2, '0')
-  const day = String(dateObj.getDate()).padStart(2, '0')
-  const hours = String(dateObj.getHours()).padStart(2, '0')
-  const minutes = String(dateObj.getMinutes()).padStart(2, '0')
-  return `${year}-${month}-${day} ${hours}:${minutes}`
 }
 
 // 页面加载时调用获取说说数据的函数
