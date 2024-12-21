@@ -27,24 +27,21 @@ const yearsDesc = Object.keys(postsByYear).sort((a, b) => b - a)
 
   <div v-for="year in yearsDesc" :key="year">
     <h2>{{ year }} 年（共计 {{ postsByYear[year].length }} 篇）</h2>
-    <ul>
-      <li v-for="post in postsByYear[year]" :key="post.url">
-        <div class="blog-item">
-          <a :href="post.url">{{ post.frontmatter.title }}</a>
-          <div>
-            <span style="margin-right: 10px; font-size: 0.8em">
-              {{ formatTime(post.frontmatter.date, 'YYYY-MM-DD') }}
-            </span>
-            <span class="blog-tag-item">
-              <Badge type="tip" :text="post.frontmatter.category" />
-            </span>
-            <span class="blog-tag-item" v-for="tag in post.frontmatter.tags">
-              <Badge type="info" :text="'# ' + tag" />
-            </span>
-          </div>
+
+    <div v-for="post in postsByYear[year]" :key="post.url" style="margin-bottom: 10px">
+      <div class="blog-item">
+        <a :href="post.url">{{ post.frontmatter.title }}</a>
+        <div>
+          <span style="margin-right: 10px; font-size: 0.8em">
+            {{ formatTime(post.frontmatter.date, 'YYYY-MM-DD') }}
+          </span>
+
+          <!-- tags -->
+          <Badge v-for="tag in post.frontmatter.tags" type="info" :text="'# ' + tag" />
+          <Badge type="warning" :text="post.frontmatter.category" />
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,8 +50,5 @@ const yearsDesc = Object.keys(postsByYear).sort((a, b) => b - a)
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.blog-tag-item {
 }
 </style>
