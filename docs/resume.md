@@ -1,5 +1,7 @@
 ---
 title: "康佳的简历"
+sidebar: false
+description: 康佳的简历, 林深时觉寒, Java 后端工程师, 前端开发, 后端开发
 ---
 <script setup>
 import ResumeDownloader from '../.vitepress/components/ResumeDownloader.vue'
@@ -9,6 +11,7 @@ import ResumeDownloader from '../.vitepress/components/ResumeDownloader.vue'
       margin-top: 30px ;
     }
 </style>
+
 # 康佳的简历
 
 <ResumeDownloader name="简历_康佳_18232110170_Java 后端"/>
