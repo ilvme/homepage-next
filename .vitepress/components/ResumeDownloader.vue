@@ -12,7 +12,6 @@ const downloads = ref([
   { label: 'PDF', name: props.name + '.pdf', url: '/files/resume.pdf' },
   { label: 'MD', name: props.name + '.md', url: '/files/resume.md' },
 ])
-console.log(downloads.value)
 </script>
 
 <template>

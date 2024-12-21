@@ -5,8 +5,7 @@ import { computed } from 'vue'
 defineProps({ tags: {} })
 
 const data = useData()
-console.log(data)
-console.log(data.isDark.value)
+
 const bgColor = computed(() => (data.isDark.value ? '#333' : '#f3f1f1'))
 const textColor = computed(() => (data.isDark.value ? '#fff' : '#000'))
 </script>

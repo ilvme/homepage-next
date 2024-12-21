@@ -30,7 +30,6 @@ const fetchWords = async () => {
       updated_at: formatPublishTime(item.updated_at),
     }))
     words.value.push(...parseCSV(oldWordsRaw))
-    console.log(words.value)
     loading.value = false
   } catch (error) {
     loading.value = false
@@ -46,7 +45,6 @@ const fetchLabels = async () => {
       repo: 'daily-words',
     })
     labels.value = data
-    console.log('label', labels.value)
   } catch (error) {
     console.error('获取标签数据失败：', error)
   }
