@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { Octokit } from '@octokit/rest'
+import oldWordsRaw from '../../scripts/old-words.raw.js'
+import parseCSV from '../../scripts/words.js'
 
 defineOptions({ name: 'Words' })
 
@@ -23,20 +25,11 @@ const fetchWords = async () => {
       per_page: 1000,
     })
 
-    // 将数据按照 updated_at 字段的年份和月份分组
-    // words.value = data.reduce((acc, cur) => {
-    //   const yearMonth = `${cur.updated_at.slice(0, 4)}-${cur.updated_at.slice(5, 7)}`
-    //   if (!acc[yearMonth]) {
-    //     acc[yearMonth] = []
-    //   }
-    //   acc[yearMonth].push(cur)
-    //   return acc
-    // }, {})
-
     words.value = data.map((item) => ({
       ...item,
       updated_at: formatPublishTime(item.updated_at),
     }))
+    words.value.push(...parseCSV(oldWordsRaw))
     console.log(words.value)
     loading.value = false
   } catch (error) {
