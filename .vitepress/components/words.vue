@@ -34,12 +34,12 @@ const fetchWords = async () => {
       ...item,
       updated_at: formatTime(item.updated_at),
     }))
-    words.value.push(...parseCSV(oldWordsRaw))
     loading.value = false
   } catch (error) {
     loading.value = false
-    console.error('获取说说数据失败：', error)
+    console.error('获取最新说说数据失败：', error)
   }
+  words.value.push(...parseCSV(oldWordsRaw))
 }
 
 // 获取所有标签数据
