@@ -2,7 +2,7 @@
 layout: page
 ---
 <script setup>
-import Words from '../.vitepress/components/words.vue'
+import Words from '../.vitepress/components/Words.vue'
 </script>
 
 <ClientOnly>

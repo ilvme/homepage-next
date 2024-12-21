@@ -2,7 +2,7 @@
 import { data as posts } from '../../scripts/blog.data.js'
 import { formatTime } from '../../scripts/utils.js'
 
-defineOptions({ name: 'Test' })
+defineOptions({ name: 'Archives' })
 
 console.log(posts)
 posts.forEach((post) => {

@@ -13,8 +13,8 @@ const nav = [
       {
         text: '前端物语',
         items: [
-          { text: 'Web 基础与 HTML', link: '...' },
-          { text: 'CSS 重点与常用技巧', link: '...' },
+          { text: 'Web 基础与 HTML', link: '/front-end/html/' },
+          { text: 'CSS 重点与常用技巧', link: '/front-end/css/' },
           { text: 'JavaScript (ES6+)', link: '...' },
         ],
       },
@@ -23,13 +23,13 @@ const nav = [
   {
     text: '折戟的后端',
     items: [
-      { text: 'Java', link: '...' },
+      { text: 'Java', link: '/back-end/java/' },
       { text: '框架与中间件', link: '/about/' },
       { text: '数据库与存储', link: '/about/' },
       { text: '架构与设计', link: '...' },
     ],
   },
-  { text: '工具链与格物篇', link: '/toolchain/headline.md' },
+  { text: '工具链与格物篇', link: '/toolchain/index.md' },
   { text: '日常笔记', link: '/daily/index.md' },
   {
     text: '关于',
