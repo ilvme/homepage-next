@@ -5,14 +5,15 @@ import sidebar from './sidebar'
 export default defineConfig({
   lang: 'zh-CN',
   title: '林深时觉寒',
-  description: 'A VitePress Site',
+  description: '林深时觉寒的博客, 技术笔记, 博客, Java,',
+  head: [['link', { rel: 'icon', href: 'images/avatar1.jpeg' }]],
 
   srcDir: 'docs',
   outDir: 'dist',
   ignoreDeadLinks: true,
 
   themeConfig: {
-    logo: 'favicon.ico',
+    logo: 'images/avatar1.jpeg',
 
     comment: true,
 
