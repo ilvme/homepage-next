@@ -34,9 +34,9 @@ const nav = [
   {
     text: '关于',
     items: [
-      { text: '关于我', link: '/about/' },
+      { text: '关于我', link: '/about.md' },
       { text: '简历', link: '/resume.md' },
-      { text: '闲言', link: '/daily-words.md' },
+      { text: 'Daily Words', link: '/daily-words.md' },
       { text: '友情链接', link: '/friends.md' },
     ],
   },

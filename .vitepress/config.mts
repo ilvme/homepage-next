@@ -37,13 +37,11 @@ export default defineConfig({
       next: '下一页',
     },
 
-    search: {
-      provider: 'local',
-    },
+    search: { provider: 'local' },
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present 林深时觉寒',
+      copyright: 'Copyright © 2012-present 林深时觉寒',
     },
 
     lightModeSwitchTitle: '点击切换至亮色模式',
