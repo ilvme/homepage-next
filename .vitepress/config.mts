@@ -19,6 +19,10 @@ export default defineConfig({
     },
   },
 
+  sitemap: {
+    hostname: 'https://ikangjia.cn',
+  },
+
   themeConfig: {
     logo: 'images/avatar1.jpeg',
 
