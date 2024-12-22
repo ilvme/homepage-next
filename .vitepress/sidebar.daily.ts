@@ -49,7 +49,7 @@ const DAILY = {
       text: '2021 年',
       collapsed: false,
       items: [
-        { text: '2021 年小结（完整版）', link: '/daily-notes/2021/2021 年小结（完整版）' },
+        { text: '2021 年小结', link: '/daily/essay/2021 年小结' },
         { text: '躺平与内卷之杂谈（味儿冲&慎读）', link: '/daily/thoughts/躺平与内卷之杂谈.md' },
       ],
     },
