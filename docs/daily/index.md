@@ -1,5 +1,6 @@
 ---
 title: 博客说明
+aside: false
 ---
 
 <script setup>

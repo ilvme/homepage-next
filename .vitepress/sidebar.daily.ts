@@ -9,6 +9,7 @@ const DAILY = {
       text: '2023 年',
       collapsed: false,
       items: [
+        { text: '2023 小结（很短，很无聊）', link: '/daily/essay/2023 小结（很短，很无聊）.md' },
         { text: '活得明白，难得糊涂', link: '/daily/poetry/活得明白，难得糊涂.md' },
         { text: '我将与未来的老猫', link: '/daily/poetry/我将与未来的老猫.md' },
         { text: '猫油诗', link: '/daily/poetry/猫油诗.md' },

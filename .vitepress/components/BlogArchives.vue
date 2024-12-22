@@ -33,7 +33,7 @@ const yearsDesc = Object.keys(postsByYear).sort((a, b) => b - a)
         <a :href="post.url">{{ post.frontmatter.title }}</a>
         <div>
           <span style="margin-right: 10px; font-size: 0.8em">
-            {{ formatTime(post.frontmatter.date, 'YYYY-MM-DD') }}
+            {{ formatTime(post.frontmatter.date, 'YYYY/MM/DD') }}
           </span>
 
           <!-- tags -->
@@ -50,5 +50,6 @@ const yearsDesc = Object.keys(postsByYear).sort((a, b) => b - a)
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 </style>
