@@ -25,6 +25,7 @@ const yearsDesc = Object.keys(postsByYear).sort((a, b) => b - a)
 <template>
   <p>共计 {{ originalPosts.length }} 篇。</p>
 
+  <!-- 按年份展示博客列表 -->
   <div v-for="year in yearsDesc" :key="year">
     <h2>{{ year }} 年（共计 {{ postsByYear[year].length }} 篇）</h2>
 
