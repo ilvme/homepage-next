@@ -2,8 +2,12 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import Giscus from '@giscus/vue'
 
 const { isDark, theme, frontmatter } = useData()
+
+const { comment } = theme.value
+console.log(comment)
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
@@ -40,21 +44,20 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout>
-    <template v-if="theme.comment && frontmatter.comment !== false" #doc-footer-before>
+    <template v-if="theme.comment.enabled && frontmatter.comment !== false" #doc-footer-before>
       <div class="doc-comments">
-        <!--        <Giscus-->
-        <!--          id="comments"-->
-        <!--          mapping="specific"-->
-        <!--          :term="pageId"-->
-        <!--          strict="1"-->
-        <!--          reactionsEnabled="1"-->
-        <!--          emitMetadata="0"-->
-        <!--          inputPosition="top"-->
-        <!--          :theme="isDark ? 'dark' : 'light'"-->
-        <!--          lang="zh-CN"-->
-        <!--          loading="lazy"-->
-        <!--          v-bind="{ ...comment }"-->
-        <!--        />-->
+        <Giscus
+          mapping="url"
+          strict="1"
+          reactions-enabled="1"
+          emit-metadata="0"
+          input-position="top"
+          :theme="isDark ? 'dark' : 'light'"
+          crossorigin="anonymous"
+          async
+          id="comments"
+          v-bind="{ ...comment }"
+        />
       </div>
     </template>
   </DefaultTheme.Layout>

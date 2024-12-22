@@ -26,7 +26,15 @@ export default defineConfig({
   themeConfig: {
     logo: 'images/avatar1.jpeg',
 
-    comment: true,
+    comment: {
+      enabled: true,
+      repo: 'kangjia96/homepage-next',
+      repoId: 'R_kgDONgKudg',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDONgKuds4ClcHy',
+      lang: 'zh-CN',
+      loading: 'lazy',
+    },
 
     nav,
     sidebar,
