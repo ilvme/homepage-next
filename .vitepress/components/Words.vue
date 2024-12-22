@@ -65,7 +65,7 @@ fetchLabels()
     <h1 style="margin: 20px 0; font-weight: bolder; font-size: 1.75rem">
       说说 <Badge type="warning" text="功能内测中，不稳定" />
     </h1>
-    <div style="background-color: #322a02; padding: 10px; border-radius: 10px">
+    <div style="padding: 10px; border-radius: 10px; border: 1px saddlebrown solid">
       说说（Daily Words):一句话叙当前所历之事，一句话抒此刻难言之情，一句话吐所遇违心之槽。
     </div>
     <div>
