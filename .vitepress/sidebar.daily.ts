@@ -10,6 +10,10 @@ const DAILY = {
       collapsed: false,
       items: [
         { text: '2023 小结（很短，很无聊）', link: '/daily/essay/2023 小结（很短，很无聊）.md' },
+        {
+          text: '我养了一只猫，它有名字叫当当',
+          link: '/daily/essay/我养了一只猫，它有名字叫当当.md',
+        },
         { text: '活得明白，难得糊涂', link: '/daily/poetry/活得明白，难得糊涂.md' },
         { text: '我将与未来的老猫', link: '/daily/poetry/我将与未来的老猫.md' },
         { text: '猫油诗', link: '/daily/poetry/猫油诗.md' },
@@ -20,6 +24,7 @@ const DAILY = {
       text: '2022 年',
       collapsed: false,
       items: [
+        { text: '2022 小结', link: '/daily/essay/2022 小结.md' },
         {
           text: '关于写年终总结这件小事',
           link: '/daily/mess/关于写年终总结这件小事.md',
