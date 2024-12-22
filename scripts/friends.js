@@ -5,4 +5,18 @@ export const friends = [
   //   link: 'https://github.com/jaywcjlove/front-end-learning',
   //   icon: 'https://ikangjia.cn/images/avatar1.jpeg',
   // },
+
+  {
+    title: '我乃风之守望者',
+    desc: '去成为一个闪闪发光的大人吧',
+    link: 'https://wind-watcher.cn/',
+    icon: 'https://image.wind-watcher.cn/dd3010cf57ee5ae139c84e69c665bf5d',
+  },
+
+  {
+    title: '贼歪',
+    desc: '尽管平平无奇，但仍然希望这个世界的运行轨迹能因我而发生一丝偏转。我正在努力',
+    link: 'https://varzy.me/',
+    icon: 'https://varzy.me/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar_front.a713d510.png&w=828&q=75',
+  },
 ]
