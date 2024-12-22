@@ -4,6 +4,7 @@ import { Octokit } from '@octokit/rest'
 import oldWordsRaw from '../../scripts/old-words.raw.js'
 import parseCSV from '../../scripts/words.js'
 import { formatTime } from '../../scripts/utils.js'
+import Word from './Word.vue'
 
 defineOptions({ name: 'Words' })
 
@@ -63,40 +64,35 @@ fetchLabels()
 <template>
   <main style="width: 80%; margin: 0 auto">
     <h1 style="margin: 20px 0; font-weight: bolder; font-size: 1.75rem">
-      说说 <Badge type="warning" text="功能内测中，不稳定" />
+      说说 <Badge type="warning" text="功能开发中，不稳定" />
     </h1>
-    <div style="padding: 10px; border-radius: 10px; border: 1px saddlebrown solid">
+    <div class="word-desc">
       说说（Daily Words):一句话叙当前所历之事，一句话抒此刻难言之情，一句话吐所遇违心之槽。
     </div>
-    <div>
-      <p>合计：{{ words.length }} 个说说。</p>
-      <p>
-        <span>标签：</span>
-        <span v-for="label in labels" :key="label.id" style="margin-right: 10px">
-          #{{ label.name }}
-        </span>
-      </p>
-    </div>
+
+    <p style="margin-bottom: 10px">
+      合计：{{ words.length }} 个说说。
+      <badge v-for="label in labels" :key="label.id" type="info" :text="'# ' + label.name" />
+    </p>
+
+    <!-- 加载中... -->
     <div v-if="loading" style="text-align: center">loading.......</div>
+
+    <!-- 空 -->
     <div v-else-if="!loading && words.length === 0" style="text-align: center">empty~</div>
-    <div v-else style="display: flex; flex-wrap: wrap">
-      <div v-for="word in words" :key="word.id" class="talk-item">
-        <p>{{ word.body }}</p>
-        <p style="display: flex; gap: 10px; margin: 5px 0">
-          <span style="font-size: 0.8em" v-for="label in word.labels" :key="label.id">
-            #{{ label.name }}
-          </span>
-        </p>
-        <p style="text-align: right; font-size: 0.8em">{{ word.updated_at }}</p>
-      </div>
+
+    <!-- 说说 -->
+    <div v-else style="display: flex; flex-wrap: wrap; gap: 10px">
+      <Word v-for="word in words" :key="word.id" :word="word" />
     </div>
   </main>
 </template>
 
 <style scoped>
-.talk-item {
-  border: rebeccapurple 1px solid;
-  padding: 10px;
-  margin: 10px;
+.word-desc {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-border);
 }
 </style>
