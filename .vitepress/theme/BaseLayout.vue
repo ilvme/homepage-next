@@ -3,8 +3,11 @@ import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import Giscus from '@giscus/vue'
+import { usePageId } from './usePageId.js'
 
 const { isDark, theme, frontmatter } = useData()
+
+const pageId = usePageId()
 
 const { comment } = theme.value
 console.log(comment)
@@ -49,6 +52,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
         <Giscus
           mapping="url"
           strict="1"
+          :term="pageId"
           reactions-enabled="1"
           emit-metadata="0"
           input-position="top"
