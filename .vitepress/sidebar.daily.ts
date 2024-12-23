@@ -3,7 +3,10 @@ const DAILY = {
     {
       text: '2024 年',
       collapsed: false,
-      items: [{ text: '梦偶天书', link: '/daily/mess/梦偶天书.md' }],
+      items: [
+        { text: '携仙游', link: '/daily/mess/携仙游.md' },
+        { text: '梦偶天书', link: '/daily/mess/梦偶天书.md' },
+      ],
     },
     {
       text: '2023 年',
