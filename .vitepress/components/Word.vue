@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <p class="talk-item">
+  <div class="talk-item">
     <p>{{ word.body }}</p>
     <p style="display: flex; gap: 10px; margin: 5px 0">
       <span style="font-size: 0.8em" v-for="label in word.labels" :key="label.id">
@@ -13,7 +13,7 @@ defineProps({
       </span>
     </p>
     <p style="text-align: right; font-size: 0.8em">{{ word.updated_at }}</p>
-  </p>
+  </div>
 </template>
 
 <style scoped lang="less">
