@@ -21,7 +21,7 @@ import Friends from '../.vitepress/theme/components/Friends.vue';
 - 网站需要有良好的稳定性和可靠性
 
 **申请方式：**
-1. 直接在本站下方留言 <badge type="warning" text="评论功能开发中..."/>
+1. 直接在本站下方留言
 2. 给我发 [Email](mailto:ikangjia.cn@outlook.com)
 
 **格式参考及本站信息如下：**
