@@ -69,6 +69,13 @@ export default defineConfig({
 
     externalLinkIcon: true,
 
+    notFound: {
+      code: '404',
+      title: '页面未找到',
+      quote: '你来到了没有知识的荒原',
+      linkText: '回到最初',
+    },
+
     // socialLinks: [{ icon: 'github', link: 'https://github.com/kangjia96' }],
   },
 })
