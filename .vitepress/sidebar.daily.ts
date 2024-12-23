@@ -4,6 +4,7 @@ const DAILY = {
       text: '2024 年',
       collapsed: false,
       items: [
+        { text: '复兴之始末（连载）', link: '/daily/mess/复兴之始末（连载）.md' },
         { text: '携仙游', link: '/daily/mess/携仙游.md' },
         { text: '梦偶天书', link: '/daily/mess/梦偶天书.md' },
       ],
