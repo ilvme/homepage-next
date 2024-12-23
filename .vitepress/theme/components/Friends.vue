@@ -1,5 +1,5 @@
 <script setup>
-import { friends } from '../../scripts/friends.js'
+import { friends } from '../../../scripts/friends.js'
 const to = (url) => {
   window.open(url)
 }

@@ -1,6 +1,6 @@
 <script setup>
-import { data as originalPosts } from '../../scripts/blog.data.js'
-import { formatTime } from '../../scripts/utils.js'
+import { data as originalPosts } from '../../../scripts/blog.data.js'
+import { formatTime } from '../../../scripts/utils.js'
 
 import { ref } from 'vue'
 

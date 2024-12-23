@@ -7,7 +7,7 @@ footer: false
 ---
 
 <script setup>
-import Friends from '../.vitepress/components/Friends.vue';
+import Friends from '../.vitepress/theme/components/Friends.vue';
 </script>
 
 # 友情链接

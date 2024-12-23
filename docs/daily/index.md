@@ -5,7 +5,7 @@ comment: false
 ---
 
 <script setup>
-import BlogArchives from '../../.vitepress/components/BlogArchives.vue';
+import BlogArchives from '../../.vitepress/theme/components/BlogArchives.vue';
 </script>
 
 # 博客

@@ -1,5 +1,5 @@
 <script setup>
-import Tags from '../../../.vitepress/components/Tags.vue'; 
+import Tags from '../../../.vitepress/theme/components/Tags.vue'; 
 </script>
 
 # {{ $frontmatter.title }}

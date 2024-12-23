@@ -1,5 +1,5 @@
 <script setup>
-import { formatTime } from '../../scripts/utils.js'
+import { formatTime } from '../../../scripts/utils.js'
 
 defineProps({
   tags: {

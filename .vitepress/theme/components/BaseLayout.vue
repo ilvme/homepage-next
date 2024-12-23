@@ -3,7 +3,7 @@ import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import Giscus from '@giscus/vue'
-import { usePageId } from './usePageId.js'
+import { usePageId } from '../composables/usePageId.js'
 
 const { isDark, theme, frontmatter } = useData()
 

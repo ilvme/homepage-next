@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import { Octokit } from '@octokit/rest'
-import oldWordsRaw from '../../scripts/old-words.raw.js'
-import parseCSV from '../../scripts/words.js'
-import { formatTime } from '../../scripts/utils.js'
+import oldWordsRaw from '../../../scripts/old-words.raw.js'
+import parseCSV from '../../../scripts/words.js'
+import { formatTime } from '../../../scripts/utils.js'
 import Word from './Word.vue'
 
 defineOptions({ name: 'Words' })

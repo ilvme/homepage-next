@@ -5,7 +5,7 @@ description: 康佳的简历, 林深时觉寒, Java 后端工程师, 前端开�
 comment: false
 ---
 <script setup>
-import ResumeDownloader from '../.vitepress/components/ResumeDownloader.vue'
+import ResumeDownloader from '../.vitepress/theme/components/ResumeDownloader.vue'
 </script>
 <style>
     .vp-doc h2 {
