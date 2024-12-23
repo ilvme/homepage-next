@@ -1,5 +1,7 @@
 const DAILY = {
   '/daily/': [
+    { text: '文章归档', link: '/daily/' },
+
     {
       text: '2024 年',
       collapsed: false,
@@ -66,6 +68,12 @@ const DAILY = {
     },
 
     {
+      text: '2020 年',
+      collapsed: false,
+      items: [{ text: '小城记忆', link: '/daily/essay/小城记忆.md' }],
+    },
+
+    {
       text: '2019 年',
       collapsed: false,
       items: [
@@ -81,6 +89,15 @@ const DAILY = {
       items: [
         { text: '北京路上', link: '/daily/essay/北京路上.md' },
         { text: '不成熟的梦想', link: '/daily/essay/不成熟的梦想.md' },
+      ],
+    },
+
+    {
+      text: '2017 年',
+      collapsed: false,
+      items: [
+        { text: '思索', link: '/daily/mess/思索.md' },
+        { text: '不假思索丶我独自旅行', link: '/daily/mess/不假思索丶我独自旅行.md' },
       ],
     },
 
@@ -107,6 +124,7 @@ const DAILY = {
       text: '2014 年',
       collapsed: false,
       items: [
+        { text: '让我跌倒', link: '/daily/poetry/让我跌倒.md' },
         { text: '严惩', link: '/daily/poetry/严惩.md' },
         { text: '给冬天', link: '/daily/poetry/给冬天.md' },
         { text: '我的风景', link: '/daily/poetry/我的风景.md' },
