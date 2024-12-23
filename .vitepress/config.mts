@@ -2,11 +2,19 @@ import { defineConfig } from 'vitepress'
 import nav from './nav'
 import sidebar from './sidebar'
 
+const isDevelopment = process.env.NODE_ENV === 'development'
+
 export default defineConfig({
   lang: 'zh-CN',
   title: '林深时觉寒',
   description: '林深时觉寒的博客, 技术笔记, 博客, Java,',
-  head: [['link', { rel: 'icon', href: 'images/avatar1.jpeg' }]],
+  head: [
+    ['link', { rel: 'icon', href: 'images/avatar1.jpeg' }],
+    [
+      'script',
+      { src: isDevelopment ? '' : 'https://hm.baidu.com/hm.js?6648b9ab3242a2892adbc09cc1535236' },
+    ],
+  ],
 
   srcDir: 'docs',
   outDir: 'dist',
