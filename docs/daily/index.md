@@ -1,5 +1,5 @@
 ---
-title: 博客说明
+title: 博客归档
 aside: false
 comment: false
 ---
@@ -11,7 +11,7 @@ import BlogArchives from '../../.vitepress/theme/components/BlogArchives.vue';
 # 博客
 
 :::warning 注意：
-部分文章图片、局部样式尚未优化，观感不佳，正持续优化调整中……
+部分文章中图片排版以及局部样式不协调，观感欠佳，博主正持续优化中……
 :::
 
 > 这里是将我的一些所见、所闻、所思、所感觉付诸精力加以整理的一些文字。
