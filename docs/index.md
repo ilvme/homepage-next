@@ -1,7 +1,5 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-layoutClass: m-home-layout
 hero:
   name: "林深时觉寒"
   tagline: Every dog has its day.
@@ -18,8 +16,3 @@ hero:
 
 越来越明白，长大后的生活，没有喜出望外的惊喜，也没有自然而然的稳定前进，有的只不过是需要带上披荆斩棘般的勇气去开拓！
 </div>
-
-
-<style>
-
-</style>
