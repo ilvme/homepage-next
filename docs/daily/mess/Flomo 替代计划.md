@@ -45,6 +45,6 @@ tags:
 
 发一张现在实现的效果图吧
 
-![WechatIMG7.jpeg](./WechatIMG7.jpeg)
+<Image src="Flomo%20替代计划/WechatIMG7.jpeg" alt="微信公众号信息样例" width="200px" />
 
-对了，我给 Notion 里的那个承载我垃圾之语的 Database 起了个很契合的名字「[Daily Words](https://ikangjia.cn/words/)」。
+对了，我给 Notion 里的那个承载我垃圾之语的 Database 起了个很契合的名字「[Daily Words](/daily-words)」。
