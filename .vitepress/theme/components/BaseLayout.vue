@@ -10,7 +10,7 @@ const { isDark, theme, frontmatter } = useData()
 const pageId = usePageId()
 
 const { comment } = theme.value
-console.log(comment)
+
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches

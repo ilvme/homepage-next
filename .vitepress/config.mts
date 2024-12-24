@@ -35,7 +35,7 @@ export default defineConfig({
     logo: 'images/avatar1.jpeg',
 
     comment: {
-      enabled: true,
+      enabled: !isDevelopment,
       repo: 'kangjia96/homepage-next',
       repoId: 'R_kgDONgKudg',
       category: 'Announcements',
