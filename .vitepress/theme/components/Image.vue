@@ -14,7 +14,7 @@ const realSrc = ref(imgBasePath + props.src)
 
 <template>
   <div class="img-container">
-    <img :src="realSrc" :alt="alt" :width="width" />
+    <img :src="realSrc" :alt="alt" :width="width" style="display: inline-block" />
     <span class="img-desc">{{ alt }}</span>
   </div>
 </template>
@@ -24,7 +24,6 @@ const realSrc = ref(imgBasePath + props.src)
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   margin-right: 20px;
 
