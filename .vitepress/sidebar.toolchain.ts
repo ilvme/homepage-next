@@ -1,7 +1,7 @@
 const TOOLCHAIN = {
   '/toolchain/': [
     {
-      items: [{ text: '在线工具', link: '/toolchain/' }],
+      items: [{ text: '在线工具', link: '/toolchain/online-tools.md' }],
     },
     {
       text: '工具链',

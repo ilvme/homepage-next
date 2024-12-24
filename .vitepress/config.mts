@@ -67,7 +67,7 @@ export default defineConfig({
     lightModeSwitchTitle: '点击切换至亮色模式',
     darkModeSwitchTitle: '点击切换成暗色模式',
 
-    externalLinkIcon: true,
+    externalLinkIcon: false,
 
     notFound: {
       code: '404',
