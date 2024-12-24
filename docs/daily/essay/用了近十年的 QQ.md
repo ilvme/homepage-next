@@ -12,7 +12,7 @@ tags:
 
 <!--@include: ../../../.vitepress/template/PostCommon.md-->
 
-![QQ](./qq.png)
+<Image src="用了近十年的%20QQ/qq.png" alt="QQ" width="100%" />
 
 > 这是一篇长文，长到我要用近10年光阴去完成。2019-10-11
 >
