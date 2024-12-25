@@ -17,7 +17,8 @@ const TOOLCHAIN = {
     {
       text: '构建 & 运维',
       items: [
-        // { text: 'Git Wiki', link: '/toolchain/' },
+        { text: 'Git Wiki', link: '/toolchain/git.md' },
+        { text: 'SSH Wiki（scp、sftp）', link: '/toolchain/ssh.md' },
         // { text: 'Maven 配置', link: '/toolchain/' },
         // { text: 'Linux 压缩与解压缩', link: '/toolchain/' },
         // { text: 'Docker Wiki', link: '/toolchain/' },

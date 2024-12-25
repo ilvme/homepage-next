@@ -1,6 +1,6 @@
 const nav = [
   { text: '首页', link: '/' },
-  { text: '导航', link: '/nav' },
+  // { text: '导航', link: '/nav' },
   {
     text: '进击的前端',
     items: [
