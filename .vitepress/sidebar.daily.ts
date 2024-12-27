@@ -6,6 +6,7 @@ const DAILY = {
       text: '2024 年',
       collapsed: false,
       items: [
+        { text: '折腾博客这三两事', link: '/daily/essay/折腾博客这三两事.md' },
         { text: '午后小歌', link: '/daily/poetry/午后小歌.md' },
         { text: '复兴之始末（连载）', link: '/daily/mess/复兴之始末（连载）.md' },
         { text: '携仙游', link: '/daily/mess/携仙游.md' },
